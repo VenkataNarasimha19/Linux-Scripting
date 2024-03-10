@@ -1,0 +1,12 @@
+Open Notepad on Desktop
+
+xcopy <backup folder path which we want to take a backup>* <path of backup file to be saved>\%date:~0,3%\* /Y /Q /S
+
+save the file as backup.bat on Desktop
+
+run the command as Admin
+
+
+go to Main menu Start --> Task Scheduler-->Create a basic Task-->name is as backup--> next--> Triggers(daily, weekly, monthly) --> Action---> start a program --> browse the backup  batch file ---> Finish
+
+restart the computer and it will takes the backup.
