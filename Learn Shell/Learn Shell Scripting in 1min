@@ -1,28 +1,95 @@
-Learn Shell/Bash Scripting in 1min:
+Linux Shell Scripts:
 
-echo $0 ---> to check & know the shell type
+echo $0 ---> To know the shell type
+cat /etc/shells ---> to check the list of shell present in the machine.
+cat /etc/os-release
 
-nano add.sh ----> write below program
 
+Shell Scripts consist of set of commands to perform a task.
+All the commands execute sequentially.
+Some tasks like file manipulation, program execution, user interaction, qutomation of task can be done.
+
+
+pwd ---. to know the present working directory.
+mkdir myscripts --> create a directory.
+ls -al --> to list the files with file description and hidden files
+pwd -->
+
+
+vi 01_basic.sh --->
 #!/bin/bash
-echo "Enter 2 numbers: "
+echo "Hello World"
+
+:wq!
+
+ls -al ---> to list the files with file description and hidden files
+chmod u+x 01_basic.sh---> Providing the execution permission to user to execute the script.
+Run the Script: ./01_basic.sh ---> to execute the file.     
+                /<path>/01_basic.sh---> to run and execute the script.
+
+
+
+vi 01_comments.sh --->
+#!/bin/bash
+echo "Checking Comments"
+
+#This is Singleline comments.
+
+<< comment
+This
+is 
+Multi
+Line Comments
+comment
+
+:wq!
+
+
+
+
+vi 03_vardemo.sh
+#!/bin/bash
+
+a=10
+name="K V Narasimha Rao"
+age=36
+echo "My name is $name and age is $age"
+name="Simha"
+echo "My name is $name"
+#Var to store the output of a command
+HOSTNAME=$(hostname)
+echo "Nmae of this machine is $HOSTNAME"
+
+:wq!
+
+
+vi 04_constant_var.sh
+#!/bin/bash
+
+#Constant variable
+readonly COLLEGE="METRO"
+echo "My college name is $COLLEGE"
+
+:wq!
+
+
+
+
+nano add.sh ---> Create the file using nano editor
+#!/bin/bash
+echo "Enter 2 Numbers: "
 read num1
 read num2
-echo "The sum is : $((num1 + num2))"
-  
-ctrl + s and ctrl + x ---> to save and exit from nano editor.
+echo "The sum is : $((num1+num2))"
 
-cat add.sh ---> to see the content in the file.
+save(ctrl+s) & exit(ctrl+x) from the nano editor file.
 
-ls -al ---> to see the list of files with file permissions.
-
-chmod u+x add.sh ---> to change the file permissions. (Given execute permissions to user)
-
-./add.sh ---> to execute the script.
+ls -al ---> to list the files with file description and hidden files..
+chmod u+x add.sh---> Providing the execution permission to user to execute the script.
+./add.sh ---> to execute the file.
 
 
-
-
+## Echo
 vim test.sh ---> Create the file using vim editor
 
 #!/bin/bash
@@ -37,13 +104,13 @@ chmod u+x test.sh---> Providing the execution permission to user to execute the 
 
 
 
-
 ## Using sleep( ) function in bash shell
 sudo vim sleep.sh
 #!/bin/bash
 echo " Wait for 5 seconds and Subscribe the channel"
 sleep 5
 echo " Thanks for Subscribing the Channel"
+
 
 :wq!
 
@@ -52,3 +119,6 @@ chmod u+x sleep.sh---> Providing the execution permission to user to execute the
 ./sleep.sh ---> to execute the file.
 
 
+
+
+cat /etc/os-release
