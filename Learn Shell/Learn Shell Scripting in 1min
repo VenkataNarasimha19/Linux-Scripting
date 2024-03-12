@@ -1,0 +1,54 @@
+Learn Shell/Bash Scripting in 1min:
+
+echo $0 ---> to check & know the shell type
+
+nano add.sh ----> write below program
+
+#!/bin/bash
+echo "Enter 2 numbers: "
+read num1
+read num2
+echo "The sum is : $((num1 + num2))"
+  
+ctrl + s and ctrl + x ---> to save and exit from nano editor.
+
+cat add.sh ---> to see the content in the file.
+
+ls -al ---> to see the list of files with file permissions.
+
+chmod u+x add.sh ---> to change the file permissions. (Given execute permissions to user)
+
+./add.sh ---> to execute the script.
+
+
+
+
+vim test.sh ---> Create the file using vim editor
+
+#!/bin/bash
+read -p "what is your name? : " name
+echo "Welcome $name"
+
+:wq!
+
+ls -al ---> to list the files with file description and hidden files
+chmod u+x test.sh---> Providing the execution permission to user to execute the script.
+./test.sh ---> to execute the file.
+
+
+
+
+## Using sleep( ) function in bash shell
+sudo vim sleep.sh
+#!/bin/bash
+echo " Wait for 5 seconds and Subscribe the channel"
+sleep 5
+echo " Thanks for Subscribing the Channel"
+
+:wq!
+
+ls -al ---> to list the files with file description and hidden files
+chmod u+x sleep.sh---> Providing the execution permission to user to execute the script.
+./sleep.sh ---> to execute the file.
+
+
